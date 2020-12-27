@@ -1,1 +1,1 @@
-export const LOAD_CANDIES = "LOAD_CANDIES"
+export const ADD_CANDIES = "ADD_CANDIES"

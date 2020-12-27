@@ -6,7 +6,7 @@ export default function Candies (state={
     candies: []
 }, action) {
     switch(action.type) {
-        case ActionTypes.LOAD_CANDIES: 
+        case ActionTypes.ADD_CANDIES: 
          return {...state, candies: action.payload, isLoading: false, errmes: null}
         default: return state;
     }

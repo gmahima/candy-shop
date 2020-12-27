@@ -35,6 +35,7 @@ function Home ({candies, loadCandies}) {
 
                 </ul>
             )}
+            {candies.isLoading && <h6>loading...</h6>}
             
         </div>
     )
