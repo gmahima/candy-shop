@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 const StyledNavBar = styled.div `
 background-color: white;
@@ -15,14 +15,14 @@ div {
 export default function NavBar () {
     return (
         <StyledNavBar>
-            {/* <Link to="/"> */}
+            {/* <Link to="/">
             <div>
                 home
             </div>
-            {/* </Link> */}
-            {/* <Link to="/about"> */}
+            </Link>
+            <Link to="/about">
             <div>about</div>
-            {/* </Link> */}
+            </Link> */}
         </StyledNavBar>
     )
 }

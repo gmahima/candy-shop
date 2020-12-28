@@ -22,7 +22,7 @@ function Home ({candies, loadCandies}) {
     }, [])
     return (
         <div>
-            <h1>Buy Some Candy</h1>
+            <h1>Buy Some Candy (please reflect change yaar...uve gure yo..nante?</h1>
             {console.log(candies.candies)}
             {candies.candies.length>0 && (
                 <ul>

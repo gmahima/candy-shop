@@ -1,7 +1,7 @@
 import React from 'react'
 import { GlobalStyles } from 'twin.macro'
 import styled, {createGlobalStyle} from 'styled-components'
-import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom'
+// import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -41,6 +41,7 @@ function App() {
             <Home />
           </Route>
         </Switch> */}
+        <Home/>
         </Container>
       {/* </Router> */}
       </>

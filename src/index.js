@@ -2,15 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {createStore, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
-import store from './redux/store'
+import storeConfig from './redux/storeConfig'
+const preloadedState = window.__PRELOADED_STATE__
+console.log(preloadedState)
+delete window.__PRELOADED_STATE__
+
+const store = createStore(storeConfig.store, preloadedState, applyMiddleware(storeConfig.middleware))
 ReactDOM.hydrate(
-  <React.StrictMode>
     <Provider store={store}>
       <App />
-    </Provider>
-   
-  </React.StrictMode>,
+    </Provider>,
   document.getElementById('root')
 );
 
