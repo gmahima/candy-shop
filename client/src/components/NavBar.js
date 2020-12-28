@@ -1,15 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import tw from 'twin.macro'
 import {Link} from 'react-router-dom'
 
 const StyledNavBar = styled.div `
-${tw `
-  bg-white
-  md:text-xl
-  flex justify-between px-4 md:px-12
-  py-2
-`}
+
+display: flex;
+justify-content: space-between;
 `
 
 export default function NavBar () {
