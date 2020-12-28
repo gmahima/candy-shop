@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react'
 import styled from 'styled-components'
-import tw from 'twin.macro'
 import {Link, withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
 import { loadCandies } from '../redux/ActionCreators'
@@ -40,4 +39,5 @@ function Home ({candies, loadCandies}) {
         </div>
     )
 }
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home))
+// export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home))
+export default connect(mapStateToProps, mapDispatchToProps)(Home)
