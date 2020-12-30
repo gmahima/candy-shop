@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -19,7 +21,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && npm run lib",
+    "lib": "rm -rf lib/ && NODE_ENV=production babel src/ -d lib/ && npm run lib:esm",
+    "lib:esm": "find lib/ -type f -name *.js -exec sed -i'' -e 's|@babel/runtime/helpers/esm|@babel/runtime/helpers|g' {} +",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -45,9 +49,14 @@
     "@babel/core": "7.10.4",
     "@babel/preset-env": "7.10.4",
     "@babel/preset-react": "7.10.4",
-    "babel-loader": "8.1.0",
-    "webpack": "4.42.0",
-    "webpack-cli": "3.3.12",
-    "webpack-node-externals": "1.7.2"
+    "babel-loader": "8.1.0"
+  },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-transform-modules-commonjs"
+    ],
+    "presets": [
+      "react-app"
+    ]
   }
 }

@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import styled from 'styled-components'
-import {Link, withRouter} from 'react-router-dom'
-import {connect} from 'react-redux'
+// import {Link, withRouter} from 'react-router-dom'
+// import {connect} from 'react-redux'
 import { loadCandies } from '../redux/ActionCreators'
 
 const mapStateToProps = (state) => {
@@ -16,14 +16,14 @@ const mapDispatchToProps = (dispatch) => {
         }
     )
 }
-function Home ({candies, loadCandies}) {
-    useEffect(() => {
-        loadCandies()
-    }, [])
+export default function Home ({candies, loadCandies}) {
+    // useEffect(() => {
+    //     loadCandies()
+    // }, [])
     return (
         <div>
             <h1>Buy Some Candy please work</h1>
-            {console.log(candies.candies)}
+            {/* {console.log(candies.candies)}
             {candies.candies.length>0 && (
                 <ul>
                     {candies.candies.map((c) => {
@@ -34,9 +34,10 @@ function Home ({candies, loadCandies}) {
 
                 </ul>
             )}
-            {candies.isLoading && <h6>loading...</h6>}
+            {candies.isLoading && <h6>loading...</h6>} */}
             
         </div>
     )
 }
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home))
+// export default connect(mapStateToProps, mapDispatchToProps)(Home)
+// https://medium.com/@zhirzh/making-cra-apps-work-with-ssr-part-1-1e23d6b1603d

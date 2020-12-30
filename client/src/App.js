@@ -1,10 +1,10 @@
 import React from 'react'
 import { GlobalStyles } from 'twin.macro'
 import styled, {createGlobalStyle} from 'styled-components'
-import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom'
-import NavBar from './components/NavBar'
-import Home from './pages/Home'
-import About from './pages/About'
+// import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom'
+// import NavBar from './components/NavBar'
+// import Home from './pages/Home'
+// import About from './pages/About'
 
 const Container = styled.div`
 `
@@ -26,20 +26,24 @@ body {
 
 function App() {
   return (
-      <Router>
+    <>
+      {/* // <Router> */}
         <GlobalStyleComponent></GlobalStyleComponent>
-        <NavBar></NavBar>
+        {/* // <NavBar></NavBar> */}
         <Container>
-        <Switch>
+        {/* <Switch>
           <Route path="/about">
             <About/>
           </Route>
           <Route path="/">
             <Home />
           </Route>
-        </Switch>
+        </Switch> */}
+        {/* <Home/> */}
+        hi
         </Container>
-      </Router>
+      {/* </Router> */}
+      </>
   );
 }
 
