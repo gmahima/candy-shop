@@ -6,7 +6,7 @@ var logger = require('morgan');
 var { BUILD_DIR, PUBLIC_DIR } = require('./paths');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var reactRenderer = require('./react-renderer');
 var app = express();
 
 // view engine setup
@@ -17,6 +17,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.get('/', reactRenderer);
 app.use(express.static(BUILD_DIR));
 app.use(express.static(PUBLIC_DIR));
 app.use(express.static(path.join(__dirname, 'public')));
